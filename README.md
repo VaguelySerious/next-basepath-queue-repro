@@ -27,7 +27,7 @@ vercel deploy            # adapter on (the default for Vercel builds)
 scripts/check.sh <deployment-url> [--scope <team>]
 ```
 
-The build log contains `Applying modifyConfig from Vercel`. `check.sh` prints `FAIL`, and the runtime logs show the `MODULE_NOT_FOUND` above on `POST /docs/api/consume`.
+The build log contains `Applying modifyConfig from Vercel`. `check.sh` prints `FAIL` along with the consumer's runtime log lines, which show the `MODULE_NOT_FOUND` above on `POST /docs/api/consume`. It exits 0 on PASS, 1 on FAIL, and 2 if it can't reach the deployment.
 
 ## Results
 
